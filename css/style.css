@@ -1,0 +1,159 @@
+/* Reset do css, estilos padrão do navegador */
+
+body,
+ul,
+li,
+p {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    font-size: 1.2rem;
+    font-family: Arial;
+}
+
+body {
+    margin-bottom: 100px;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Importação da fonte utilizada pelo googlefonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+header {
+    background-color: #1d1e29;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.menu {
+    display: flex;
+}
+
+.menu li {
+    margin-left: 10px;
+}
+
+.menu li a {
+    display: block;    padding: 10px;
+}
+
+.menu li a:hover {
+    color: rgb(206, 206, 206);
+    border-bottom: #bdbdbd 2px solid;
+}
+
+.logo {
+    width: 150px;
+
+}
+
+ul {
+    list-style-type: none;
+}
+
+.links-menu {
+    color: white;
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 30px;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* CSS flex blox */
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.flex>figure {
+    flex: 1 1 300px;
+    margin: 10px;
+}
+
+/* CSS Grid 1 */
+.grid1 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.grid1>figure:nth-child(n + 4) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    align-items: center;
+}
+
+.grid1>figure.anuncio {
+    grid-column: 1;
+    grid-row: 2 / 5;
+    display: block;
+}
+
+@media (max-width: 600px){
+    .grid1 {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .grid1>figure:nth-child(n + 4) {
+        display: block;
+    }
+
+    .grid1>figure.anuncio {
+        grid-column: auto;
+        grid-row: auto;
+        order: -1;
+    }
+}
+
+/* CSS Grid 2 */
+
+.grid2 {
+    display: grid;
+    grid-template-columns: 1fr 200px;
+    gap: 20px;
+    max-width: 800px;
+    padding: 10px;
+    margin: 0 auto;
+
+}
+
+.sidebar>figure {
+    margin-bottom: 10px;
+}
+
+@media (max-width: 600px) {
+    .grid2{
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar{
+        display: flex;
+        overflow: scroll;
+    }
+
+    .sidebar>figure {
+        flex: 1 0 200px;
+        margin: 0 10px;
+    }
+    
+}
