@@ -32,6 +32,9 @@ header {
     flex-wrap: wrap;
 }
 
+.logo{
+    color: #FFF;
+}
 .menu {
     display: flex;
 }
@@ -78,13 +81,14 @@ img {
 .flex {
     display: flex;
     flex-wrap: wrap;
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
 .flex>figure {
     flex: 1 1 300px;
     margin: 10px;
+    text-align: center;
 }
 
 /* CSS Grid 1 */
@@ -94,6 +98,7 @@ img {
     max-width: 950px;
     margin: 0 auto;
     padding: 10px;
+    text-align: center;
 }
 
 .grid1>figure:nth-child(n + 4) {
@@ -134,9 +139,12 @@ img {
     max-width: 800px;
     padding: 10px;
     margin: 0 auto;
+    text-align: center;
 
 }
-
+figcaption{
+    margin-top: 5px;
+}
 .sidebar>figure {
     margin-bottom: 10px;
 }
